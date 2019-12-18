@@ -47,6 +47,9 @@ const checkCode = (res) => {
 
 export default {
     post(url, data) {
+        data = {
+            '': JSON.stringify(data)
+        }
         return axios({
             method: 'post',
             url,
